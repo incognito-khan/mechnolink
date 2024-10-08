@@ -1,0 +1,90 @@
+@import '../../styles/abstract/custom-variables';
+@import '../../styles/abstract/custom-mixins';
+
+.space {
+    &__top {
+        @include breakpoint(min-xl-device) {
+            padding-top: 140px;
+        }
+        @include breakpoint(min-lg-device) {
+            padding-top: 100px;
+        }
+        @include breakpoint(max-md-device) {
+            padding-top: 50px;
+        }
+    }
+    &__yaxis {
+        @include breakpoint(min-xl-device) {
+            padding-top: 140px;
+            padding-bottom: 140px;
+        }
+        @include breakpoint(min-lg-device) {
+            padding-top: 100px;
+            padding-bottom: 100px;
+        }
+        @include breakpoint(max-md-device) {
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+    }
+}
+
+// .navigation_brand {
+//     background-color: $white;
+//     height: 155px;
+//     width: 100%;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     margin-top: 150px;
+//     cursor: pointer;
+//     @include breakpoint(max-xxs-device) {
+//         background-color: transparent;
+//         height: auto;
+//         margin-top: 20px;
+//         margin-bottom: 20px;
+//     }
+//     .button_next_brand,
+//     .button_prev_brand {
+//         font-size: 30px;
+//         width: 50px;
+//         height: 50px;
+//         text-align: center;
+//         color: $secondary;
+//         transition: $baseTransition;
+//         @include breakpoint(max-xxs-device) {
+//             color: $white;
+//         }
+//         &:hover {
+//             color: $primary;
+//         }
+//     }
+// }
+
+.bg {
+    background-image: url('/images/brand/bg/1-1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+
+.heading {
+    font-size: 30px;
+    font-weight: 700;
+    color: $primary;
+    margin-bottom: 5%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    @include breakpoint(max-md-device) {
+        font-size: 30px;
+    }
+    @include breakpoint(max-sm-device) {
+        font-size: 25px;
+    }
+}

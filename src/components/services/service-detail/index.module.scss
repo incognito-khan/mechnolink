@@ -1,0 +1,292 @@
+@import '../../../styles/abstract/custom-variables';
+@import '../../../styles/abstract/custom-mixins';
+
+.area {
+    @include breakpoint(min-xl-device) {
+        padding-top: 140px;
+        padding-bottom: 140px;
+    }
+
+    @include breakpoint(lg-device) {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    @include breakpoint(max-md-device) {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+}
+
+.content {
+    width: 100%;
+}
+
+.content_full {
+    width: 100%;
+}
+
+.title {
+    margin-bottom: 25px;
+    font-size: 48px;
+    line-height: 1.2;
+    width: 70%;
+    // white-space: nowrap;
+
+    @include breakpoint(max-sm-device) {
+        font-size: 40px;
+    }
+}
+
+.subtitle {
+    margin-bottom: 30px;
+    font-size: 28px;
+    line-height: 1.2;
+    font-weight: 500;
+    color: $primary;
+
+    @include breakpoint(max-sm-device) {
+        font-size: 25px;
+    }
+}
+
+.desc {
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+.group {
+    &_image {
+        display: flex;
+
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+.single {
+    &_image {
+        width: 100%;
+    }
+}
+
+.sidebar {
+    &_widget {
+        background-color: $secondary;
+    }
+
+    &_list {
+        text-align: center;
+
+        li {
+            &:not(:last-child) {
+                border-bottom: 1px solid #5b749a;
+            }
+
+            a {
+                transition: $baseTransition;
+                color: $white;
+                padding-top: 20px;
+                padding-bottom: 20px;
+                color: $white;
+                display: block;
+            }
+
+            &:hover {
+                a {
+                    background-color: $primary;
+                    color: $white;
+                }
+            }
+        }
+    }
+
+    &_brochure {
+        &__widget {
+            // background-color: $primary;
+            text-align: center;
+            width: 100%;
+            display: flex;
+            justify-content: start;
+        }
+
+        &__list {
+            display: flex;
+            gap: 0.5rem;
+
+            @include breakpoint(max-xxs-device) {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            li {
+                &:not(:last-child) {
+                    border-bottom: 1px solid #ffdac8;
+                }
+
+                @include breakpoint(ul-max-xl-device) {
+                    display: block;
+                    width: 120px;
+                }
+
+                @include breakpoint(max-lg-device) {
+                    display: block;
+                    width: 100px;
+                }
+
+                @include breakpoint(max-xxs-device) {
+                    width: 330px;
+                }
+
+                @include breakpoint(max-xxxs-device) {
+                    width: 200px;
+                }
+
+                a {
+                    transition: $baseTransition;
+                    text-transform: uppercase;
+                    padding-top: 11px;
+                    padding-bottom: 11px;
+                    padding-right: 0px;
+                    padding-left: 7px;
+                    font-size: 91%;
+                    display: block;
+                    color: $white;
+                    display: block;
+
+                    @include breakpoint(ul-max-xl-device) {
+                        font-size: 15px;
+                        padding-bottom: 0;
+                        padding-left: 0;
+                        text-align: center;
+                    }
+
+                    @include breakpoint(max-lg-device) {
+                        font-size: 8px;
+                    }
+
+                    @include breakpoint(max-xxs-device) {
+                        font-size: 20px;
+                    }
+
+                    @include breakpoint(max-xxxs-device) {
+                        font-size: 10px;
+                    }
+                }
+
+                span {
+                    transition: $baseTransition;
+                }
+
+                &:hover {
+                    // a {
+                    //     background-color: $secondary;
+                    //     color: $white;
+
+                    //     span {
+                    //         color: $white;
+                    //     }
+                    // }
+
+                    background-color: $secondary;
+                }
+            }
+        }
+    }
+}
+
+.main {
+    display: flex;
+    gap: 2%;
+    align-items: start;
+
+    @include breakpoint(max-sm-device) {
+        flex-direction: column;
+    }
+}
+
+.list_items {
+    background: $primary;
+    width: 9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    
+}
+
+.brochureName {
+    padding: 2px 5px;
+}
+
+.downloadImage {
+    width: auto;
+    height: 2rem;
+    padding-right: 7px;
+}
+
+.groupImages {
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+
+    @include breakpoint(max-xs-device) {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+}
+
+.exStockGroupImages {
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+
+    @include breakpoint(max-xxs-device) {
+        gap: 50px;
+    }
+}
+
+.groupImage {
+    width: 40%;
+
+    @include breakpoint(max-xs-device) {
+        width: 60%;
+    }
+
+    @include breakpoint(max-xxs-device) {
+        width: 70%;
+    }
+}
+
+.extraBrochure {
+    display: flex;
+    align-items: end;
+    gap: 12rem;
+
+    @include breakpoint(max-xxs-device) {
+        flex-direction: column;
+        gap: 0px;
+    }
+}
+
+.extraBrochureHeading {
+    width: 100%;
+
+    @include breakpoint(max-xxs-device) {
+        margin-bottom: 0px;
+    }
+}
+
+.exStockGroupImage {
+    width: 135px;
+}

@@ -1,0 +1,104 @@
+@import '../../../styles/abstract/custom-variables';
+@import '../../../styles/abstract/custom-mixins';
+
+.area {
+    height: 70vh;
+    padding: 80px 260px;
+    margin-bottom: 10px;
+
+    @include breakpoint(max-xxl-device) {
+        padding: 50px 180px;
+    }
+    @include breakpoint(max-md-device) {
+        padding: 50px 100px;
+    }
+    @include breakpoint(max-smd-device) {
+        padding: 50px 40px;
+    }
+    @include breakpoint(max-xs-device) {
+        padding: 20px 40px;
+    }
+}
+
+.headings {
+    margin-bottom: 60px;
+    line-height: 130px;
+
+    @include breakpoint(max-base-device) {
+        margin-bottom: 40px;
+        line-height: 100px;
+    }
+    @include breakpoint(max-xxs-device) {
+        margin-bottom: 20px;
+    }
+}
+
+.title {
+    font-size: 7rem;
+    font-weight: 800;
+    margin-bottom: 0;
+
+    @include breakpoint(max-xxl-device) {
+        font-size: 5rem;
+    }
+    @include breakpoint(max-base-device) {
+        font-size: 3.6rem;
+    }
+    @include breakpoint(max-x-device) {
+        font-size: 2.8rem;
+    }
+    @include breakpoint(max-xs-device) {
+        font-size: 2.6rem;
+        line-height: 50px;
+    }
+}
+
+.occupation {
+    font-size: 2.5rem;
+    font-weight: 400;
+
+    @include breakpoint(max-base-device) {
+        font-size: 2rem;
+    }
+    @include breakpoint(max-x-device) {
+        font-size: 1.7rem;
+    }
+    @include breakpoint(max-xs-device) {
+        font-size: 1.5rem;
+    }
+    @include breakpoint(max-xs-device) {
+        margin-top: 10px;
+    }
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    @include breakpoint(max-xxxs-device) {
+        gap: 0px;
+    }
+}
+
+.content_text {
+    font-size: 1.5rem;
+
+    @include breakpoint(max-x-device) {
+        font-size: 1.4rem;
+    }
+    @include breakpoint(max-xs-device) {
+        font-size: 1.3rem;
+    }
+    @include breakpoint(max-xxs-device) {
+        font-size: 1.2rem;
+    }
+    @include breakpoint(max-xxxs-device) {
+        font-size: 1.1rem;
+        line-height: 21px;
+    }
+    @include breakpoint(max-2xs-device) {
+        font-size: 0.9rem;
+        line-height: 18px;
+    }
+}
